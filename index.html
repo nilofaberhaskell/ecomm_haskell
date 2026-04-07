@@ -11,50 +11,66 @@ h1{font-size:22px;font-weight:500;margin-bottom:.25rem}
 .subtitle{font-size:14px;color:#666;margin-bottom:2rem}
 .section-title{font-size:12px;font-weight:500;color:#888;text-transform:uppercase;letter-spacing:.06em;margin:2rem 0 .75rem}
 .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:1rem}
-.cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:1rem}
 .card{background:#f1efe8;border-radius:8px;padding:.85rem 1rem}
 .card-label{font-size:12px;color:#888;margin-bottom:4px}
 .card-value{font-size:20px;font-weight:500}
 .card-sub{font-size:11px;color:#aaa;margin-top:2px}
 .chart-box{background:#fff;border:0.5px solid rgba(0,0,0,.12);border-radius:12px;padding:1rem 1.25rem;margin-bottom:1rem}
-.chart-title{font-size:13px;font-weight:500;color:#888;margin-bottom:.75rem}
 .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .cohort-table{width:100%;border-collapse:collapse;font-size:11px}
 .cohort-table td,.cohort-table th{padding:4px 5px;text-align:center}
 .cohort-table th{color:#888;font-weight:500;border-bottom:0.5px solid rgba(0,0,0,.1)}
 .cohort-table td:first-child{text-align:left;color:#888;font-size:11px}
 .ct{border-radius:3px;font-size:11px;padding:2px 0}
-.bar-row{display:flex;align-items:center;gap:8px;margin-bottom:8px;font-size:13px}
-.bar-label{width:140px;color:#888;font-size:12px;text-align:right;flex-shrink:0}
-.bar-track{flex:1;background:#f1efe8;border-radius:3px;height:16px;overflow:hidden}
+.bar-row{display:flex;align-items:center;gap:8px;margin-bottom:9px}
+.bar-label{width:128px;color:#888;font-size:11px;text-align:right;flex-shrink:0;line-height:1.3}
+.bar-track{flex:1;background:#f1efe8;border-radius:3px;height:14px;overflow:hidden}
 .bar-fill{height:100%;border-radius:3px}
-.bar-val{width:75px;font-size:12px;font-weight:500}
-.produto-row{display:flex;align-items:center;justify-content:space-between;padding:7px 0;border-bottom:0.5px solid rgba(0,0,0,.08);font-size:13px}
-.produto-row:last-child{border-bottom:none}
+.bar-val{width:55px;font-size:11px;font-weight:500;color:#1a1a18}
+.bar-sub{font-size:10px;color:#aaa;width:75px}
 .leg{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:8px;font-size:12px;color:#888}
 .leg span{display:flex;align-items:center;gap:4px}
 .leg-dot{width:10px;height:10px;border-radius:2px;flex-shrink:0}
+.note{font-size:10px;color:#aaa;margin-top:6px;font-style:italic}
+/* product table */
+.ptable{width:100%;border-collapse:collapse;font-size:12px}
+.ptable th{color:#888;font-weight:500;padding:6px 8px;text-align:right;border-bottom:0.5px solid rgba(0,0,0,.1);white-space:nowrap}
+.ptable th:first-child{text-align:left}
+.ptable td{padding:7px 8px;text-align:right;border-bottom:0.5px solid rgba(0,0,0,.06);vertical-align:middle}
+.ptable td:first-child{text-align:left;font-size:11px;color:#333}
+.ptable tr:last-child td{border-bottom:none}
+.ptable tr:hover td{background:#f9f9f7}
+.pct-pill{display:inline-block;background:#eaf3de;color:#3b6d11;border-radius:4px;padding:1px 5px;font-size:10px;font-weight:500}
+.pct-pill-b{background:#e6f1fb;color:#185fa5}
+/* estado table */
+.etable{width:100%;border-collapse:collapse;font-size:11.5px}
+.etable th{color:#888;font-weight:500;padding:5px 7px;text-align:right;border-bottom:0.5px solid rgba(0,0,0,.1);white-space:nowrap}
+.etable th:first-child{text-align:left}
+.etable td{padding:6px 7px;text-align:right;border-bottom:0.5px solid rgba(0,0,0,.06)}
+.etable td:first-child{text-align:left;font-weight:500}
+.etable tr:last-child td{border-bottom:none}
+.etable tr:hover td{background:#f9f9f7}
 .alert{background:#faeeda;border-radius:8px;padding:.6rem .9rem;font-size:12px;color:#854f0b;margin-bottom:.5rem}
 .insight{background:#e6f1fb;border-radius:8px;padding:.6rem .9rem;font-size:12px;color:#185fa5;margin-bottom:.5rem}
 .success-chip{background:#eaf3de;border-radius:8px;padding:.6rem .9rem;font-size:12px;color:#3b6d11;margin-bottom:.5rem}
-@media(max-width:700px){.cards,.row2{grid-template-columns:1fr 1fr}.cards{grid-template-columns:1fr 1fr}}
+@media(max-width:700px){.cards,.row2{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
 <h1>NuvemShop — Dashboard de Vendas</h1>
-<p class="subtitle">Análise completa • Fevereiro 2025 – Março 2026</p>
+<p class="subtitle">Análise completa · Fevereiro 2025 – Março 2026 &nbsp;·&nbsp; Médias calculadas excluindo valores zero e em branco</p>
 
 <div class="cards">
   <div class="card"><div class="card-label">Faturamento bruto</div><div class="card-value">R$ 2,67M</div><div class="card-sub">13 meses de dados</div></div>
   <div class="card"><div class="card-label">Pedidos únicos</div><div class="card-value">10.784</div><div class="card-sub">válidos (não cancelados)</div></div>
-  <div class="card"><div class="card-label">Ticket médio</div><div class="card-value">R$ 248</div><div class="card-sub">mediana R$ 250</div></div>
+  <div class="card"><div class="card-label">Ticket médio</div><div class="card-value">R$ 248</div><div class="card-sub">mediana R$ 250 · excl. zeros</div></div>
   <div class="card"><div class="card-label">Clientes únicos</div><div class="card-value">9.156</div><div class="card-sub">LTV médio R$ 292</div></div>
 </div>
 <div class="cards">
   <div class="card"><div class="card-label">Taxa de recorrência</div><div class="card-value">11,7%</div><div class="card-sub">1.067 clientes retornaram</div></div>
   <div class="card"><div class="card-label">Intervalo recompra</div><div class="card-value">79 dias</div><div class="card-sub">mediana 64 dias</div></div>
   <div class="card"><div class="card-label">Taxa de cancelamento</div><div class="card-value">3,4%</div><div class="card-sub">384 pedidos cancelados</div></div>
-  <div class="card"><div class="card-label">Frete total gasto</div><div class="card-value">R$ 127K</div><div class="card-sub">custo médio R$ 11,80</div></div>
+  <div class="card"><div class="card-label">Frete médio real</div><div class="card-value">R$ 25,43</div><div class="card-sub">excluindo fretes zero/branco</div></div>
 </div>
 
 <p class="section-title">Pedidos e faturamento por mês</p>
@@ -66,62 +82,179 @@ h1{font-size:22px;font-weight:500;margin-bottom:.25rem}
   <div style="position:relative;height:220px"><canvas id="c1"></canvas></div>
 </div>
 
-<div class="row2">
-  <div>
-    <p class="section-title">Top estados — pedidos</p>
-    <div class="chart-box">
-      <div class="bar-row"><div class="bar-label">São Paulo</div><div class="bar-track"><div class="bar-fill" style="width:100%;background:#378ADD"></div></div><div class="bar-val">3.269 ped</div></div>
-      <div class="bar-row"><div class="bar-label">Minas Gerais</div><div class="bar-track"><div class="bar-fill" style="width:62.7%;background:#378ADD"></div></div><div class="bar-val">2.050</div></div>
-      <div class="bar-row"><div class="bar-label">Rio de Janeiro</div><div class="bar-track"><div class="bar-fill" style="width:33.8%;background:#378ADD"></div></div><div class="bar-val">1.104</div></div>
-      <div class="bar-row"><div class="bar-label">Santa Catarina</div><div class="bar-track"><div class="bar-fill" style="width:19.1%;background:#378ADD"></div></div><div class="bar-val">625</div></div>
-      <div class="bar-row"><div class="bar-label">Paraná</div><div class="bar-track"><div class="bar-fill" style="width:18.8%;background:#378ADD"></div></div><div class="bar-val">615</div></div>
-      <div class="bar-row"><div class="bar-label">Bahia</div><div class="bar-track"><div class="bar-fill" style="width:16.4%;background:#378ADD"></div></div><div class="bar-val">536</div></div>
-      <div class="bar-row"><div class="bar-label">Goiás</div><div class="bar-track"><div class="bar-fill" style="width:11.3%;background:#378ADD"></div></div><div class="bar-val">369</div></div>
-      <div class="bar-row"><div class="bar-label">Distrito Federal</div><div class="bar-track"><div class="bar-fill" style="width:8.9%;background:#378ADD"></div></div><div class="bar-val">292</div></div>
-    </div>
+<p class="section-title">Top estados — pedidos, faturamento e médias mensais</p>
+<div class="chart-box">
+  <div style="overflow-x:auto">
+  <table class="etable">
+    <thead>
+      <tr>
+        <th>Estado</th>
+        <th>Pedidos</th><th>% total</th>
+        <th>Faturamento</th><th>% total</th>
+        <th>Média ped/mês</th>
+        <th>Média fat/mês</th>
+        <th>Ticket médio</th>
+        <th>Frete médio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>São Paulo</td><td>3.269</td><td>30,3%</td><td>R$ 788.755</td><td>29,5%</td><td>233</td><td>R$ 56.340</td><td>R$ 241</td><td>R$ 24,97</td></tr>
+      <tr><td>Minas Gerais</td><td>2.050</td><td>19,0%</td><td>R$ 456.229</td><td>17,0%</td><td>146</td><td>R$ 32.588</td><td>R$ 223</td><td>R$ 19,70</td></tr>
+      <tr><td>Rio de Janeiro</td><td>1.104</td><td>10,2%</td><td>R$ 246.774</td><td>9,2%</td><td>79</td><td>R$ 17.627</td><td>R$ 224</td><td>R$ 21,35</td></tr>
+      <tr><td>Santa Catarina</td><td>625</td><td>5,8%</td><td>R$ 164.694</td><td>6,2%</td><td>45</td><td>R$ 11.764</td><td>R$ 264</td><td>R$ 28,12</td></tr>
+      <tr><td>Paraná</td><td>615</td><td>5,7%</td><td>R$ 155.793</td><td>5,8%</td><td>44</td><td>R$ 11.128</td><td>R$ 253</td><td>R$ 27,08</td></tr>
+      <tr><td>Bahia</td><td>536</td><td>5,0%</td><td>R$ 151.201</td><td>5,6%</td><td>38</td><td>R$ 10.800</td><td>R$ 282</td><td>R$ 37,14</td></tr>
+      <tr><td>Goiás</td><td>369</td><td>3,4%</td><td>R$ 100.779</td><td>3,8%</td><td>26</td><td>R$ 7.199</td><td>R$ 273</td><td>R$ 31,71</td></tr>
+      <tr><td>Rio Grande do Sul</td><td>389</td><td>3,6%</td><td>R$ 95.635</td><td>3,6%</td><td>28</td><td>R$ 6.831</td><td>R$ 246</td><td>R$ 26,98</td></tr>
+      <tr><td>Distrito Federal</td><td>292</td><td>2,7%</td><td>R$ 78.475</td><td>2,9%</td><td>21</td><td>R$ 5.605</td><td>R$ 269</td><td>R$ 25,09</td></tr>
+      <tr><td>Espírito Santo</td><td>231</td><td>2,1%</td><td>R$ 59.048</td><td>2,2%</td><td>17</td><td>R$ 4.218</td><td>R$ 256</td><td>R$ 26,06</td></tr>
+    </tbody>
+  </table>
   </div>
-  <div>
-    <p class="section-title">Top estados — ticket médio</p>
-    <div class="chart-box">
-      <div class="bar-row"><div class="bar-label">Pará</div><div class="bar-track"><div class="bar-fill" style="width:100%;background:#1D9E75"></div></div><div class="bar-val">R$ 311</div></div>
-      <div class="bar-row"><div class="bar-label">Alagoas</div><div class="bar-track"><div class="bar-fill" style="width:98.4%;background:#1D9E75"></div></div><div class="bar-val">R$ 306</div></div>
-      <div class="bar-row"><div class="bar-label">Pernambuco</div><div class="bar-track"><div class="bar-fill" style="width:91.4%;background:#1D9E75"></div></div><div class="bar-val">R$ 284</div></div>
-      <div class="bar-row"><div class="bar-label">Mato Grosso</div><div class="bar-track"><div class="bar-fill" style="width:92.7%;background:#1D9E75"></div></div><div class="bar-val">R$ 288</div></div>
-      <div class="bar-row"><div class="bar-label">Bahia</div><div class="bar-track"><div class="bar-fill" style="width:90.7%;background:#1D9E75"></div></div><div class="bar-val">R$ 282</div></div>
-      <div class="bar-row"><div class="bar-label">Dist. Federal</div><div class="bar-track"><div class="bar-fill" style="width:86.4%;background:#1D9E75"></div></div><div class="bar-val">R$ 269</div></div>
-      <div class="bar-row"><div class="bar-label">Santa Catarina</div><div class="bar-track"><div class="bar-fill" style="width:84.8%;background:#1D9E75"></div></div><div class="bar-val">R$ 264</div></div>
-      <div class="bar-row"><div class="bar-label">São Paulo</div><div class="bar-track"><div class="bar-fill" style="width:77.6%;background:#1D9E75"></div></div><div class="bar-val">R$ 241</div></div>
-    </div>
-  </div>
+  <p class="note">SP + MG + RJ = 59,5% dos pedidos e 55,7% do faturamento total</p>
 </div>
 
 <div class="row2">
   <div>
-    <p class="section-title">Frete médio por estado</p>
+    <p class="section-title">Estados — pedidos/mês (média)</p>
     <div class="chart-box">
-      <div class="bar-row"><div class="bar-label">Mat. Grosso do Sul</div><div class="bar-track"><div class="bar-fill" style="width:100%;background:#BA7517"></div></div><div class="bar-val">R$ 14,02</div></div>
-      <div class="bar-row"><div class="bar-label">Goiás</div><div class="bar-track"><div class="bar-fill" style="width:95%;background:#BA7517"></div></div><div class="bar-val">R$ 13,32</div></div>
-      <div class="bar-row"><div class="bar-label">Bahia</div><div class="bar-track"><div class="bar-fill" style="width:89.5%;background:#BA7517"></div></div><div class="bar-val">R$ 12,54</div></div>
-      <div class="bar-row"><div class="bar-label">Rio de Janeiro</div><div class="bar-track"><div class="bar-fill" style="width:86.6%;background:#BA7517"></div></div><div class="bar-val">R$ 12,14</div></div>
-      <div class="bar-row"><div class="bar-label">São Paulo</div><div class="bar-track"><div class="bar-fill" style="width:86%;background:#BA7517"></div></div><div class="bar-val">R$ 12,06</div></div>
-      <div class="bar-row"><div class="bar-label">Dist. Federal</div><div class="bar-track"><div class="bar-fill" style="width:86.4%;background:#BA7517"></div></div><div class="bar-val">R$ 12,12</div></div>
-      <div class="bar-row"><div class="bar-label">Minas Gerais</div><div class="bar-track"><div class="bar-fill" style="width:82.4%;background:#BA7517"></div></div><div class="bar-val">R$ 11,56</div></div>
-      <div class="bar-row"><div class="bar-label">Paraná / SC</div><div class="bar-track"><div class="bar-fill" style="width:76%;background:#BA7517"></div></div><div class="bar-val">R$ 10,70</div></div>
+      <div class="bar-row"><div class="bar-label">São Paulo</div><div class="bar-track"><div class="bar-fill" style="width:100%;background:#378ADD"></div></div><div class="bar-val">233</div><div class="bar-sub" style="color:#888;font-size:10px">ped/mês</div></div>
+      <div class="bar-row"><div class="bar-label">Minas Gerais</div><div class="bar-track"><div class="bar-fill" style="width:62.7%;background:#378ADD"></div></div><div class="bar-val">146</div></div>
+      <div class="bar-row"><div class="bar-label">Rio de Janeiro</div><div class="bar-track"><div class="bar-fill" style="width:33.9%;background:#378ADD"></div></div><div class="bar-val">79</div></div>
+      <div class="bar-row"><div class="bar-label">Santa Catarina</div><div class="bar-track"><div class="bar-fill" style="width:19.3%;background:#378ADD"></div></div><div class="bar-val">45</div></div>
+      <div class="bar-row"><div class="bar-label">Paraná</div><div class="bar-track"><div class="bar-fill" style="width:18.9%;background:#378ADD"></div></div><div class="bar-val">44</div></div>
+      <div class="bar-row"><div class="bar-label">Bahia</div><div class="bar-track"><div class="bar-fill" style="width:16.3%;background:#378ADD"></div></div><div class="bar-val">38</div></div>
+      <div class="bar-row"><div class="bar-label">Rio Grande do Sul</div><div class="bar-track"><div class="bar-fill" style="width:12%;background:#378ADD"></div></div><div class="bar-val">28</div></div>
+      <div class="bar-row"><div class="bar-label">Goiás</div><div class="bar-track"><div class="bar-fill" style="width:11.3%;background:#378ADD"></div></div><div class="bar-val">26</div></div>
+      <div class="bar-row"><div class="bar-label">Distrito Federal</div><div class="bar-track"><div class="bar-fill" style="width:9%;background:#378ADD"></div></div><div class="bar-val">21</div></div>
+      <div class="bar-row"><div class="bar-label">Espírito Santo</div><div class="bar-track"><div class="bar-fill" style="width:7.1%;background:#378ADD"></div></div><div class="bar-val">17</div></div>
     </div>
   </div>
   <div>
-    <p class="section-title">Tempo de despacho (pedido → envio)</p>
+    <p class="section-title">Estados — faturamento/mês (média)</p>
     <div class="chart-box">
-      <div class="bar-row"><div class="bar-label">Total Express</div><div class="bar-track"><div class="bar-fill" style="width:33%;background:#534AB7"></div></div><div class="bar-val">1,8 dias</div></div>
-      <div class="bar-row"><div class="bar-label">SEDEX</div><div class="bar-track"><div class="bar-fill" style="width:51%;background:#534AB7"></div></div><div class="bar-val">2,8 dias</div></div>
-      <div class="bar-row"><div class="bar-label">Frete Grátis</div><div class="bar-track"><div class="bar-fill" style="width:51%;background:#534AB7"></div></div><div class="bar-val">2,8 dias</div></div>
-      <div class="bar-row"><div class="bar-label">PAC</div><div class="bar-track"><div class="bar-fill" style="width:100%;background:#534AB7"></div></div><div class="bar-val">5,4 dias</div></div>
-      <div style="border-top:0.5px solid rgba(0,0,0,.1);padding-top:12px;margin-top:8px">
-        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;text-align:center">
-          <div><div style="font-size:18px;font-weight:500">48%</div><div style="font-size:11px;color:#888">em até 1 dia</div></div>
-          <div><div style="font-size:18px;font-weight:500">78%</div><div style="font-size:11px;color:#888">em até 3 dias</div></div>
-          <div><div style="font-size:18px;font-weight:500">90%</div><div style="font-size:11px;color:#888">em até 7 dias</div></div>
-        </div>
+      <div class="bar-row"><div class="bar-label">São Paulo</div><div class="bar-track"><div class="bar-fill" style="width:100%;background:#1D9E75"></div></div><div class="bar-val">R$56K</div></div>
+      <div class="bar-row"><div class="bar-label">Minas Gerais</div><div class="bar-track"><div class="bar-fill" style="width:57.8%;background:#1D9E75"></div></div><div class="bar-val">R$33K</div></div>
+      <div class="bar-row"><div class="bar-label">Rio de Janeiro</div><div class="bar-track"><div class="bar-fill" style="width:31.3%;background:#1D9E75"></div></div><div class="bar-val">R$18K</div></div>
+      <div class="bar-row"><div class="bar-label">Santa Catarina</div><div class="bar-track"><div class="bar-fill" style="width:20.9%;background:#1D9E75"></div></div><div class="bar-val">R$12K</div></div>
+      <div class="bar-row"><div class="bar-label">Paraná</div><div class="bar-track"><div class="bar-fill" style="width:19.7%;background:#1D9E75"></div></div><div class="bar-val">R$11K</div></div>
+      <div class="bar-row"><div class="bar-label">Bahia</div><div class="bar-track"><div class="bar-fill" style="width:19.2%;background:#1D9E75"></div></div><div class="bar-val">R$11K</div></div>
+      <div class="bar-row"><div class="bar-label">Rio Grande do Sul</div><div class="bar-track"><div class="bar-fill" style="width:12.1%;background:#1D9E75"></div></div><div class="bar-val">R$7K</div></div>
+      <div class="bar-row"><div class="bar-label">Goiás</div><div class="bar-track"><div class="bar-fill" style="width:12.8%;background:#1D9E75"></div></div><div class="bar-val">R$7K</div></div>
+      <div class="bar-row"><div class="bar-label">Distrito Federal</div><div class="bar-track"><div class="bar-fill" style="width:9.9%;background:#1D9E75"></div></div><div class="bar-val">R$6K</div></div>
+      <div class="bar-row"><div class="bar-label">Espírito Santo</div><div class="bar-track"><div class="bar-fill" style="width:7.5%;background:#1D9E75"></div></div><div class="bar-val">R$4K</div></div>
+    </div>
+  </div>
+</div>
+
+<p class="section-title">Top 10 produtos — unidades, faturamento, % e médias mensais</p>
+<div class="chart-box">
+  <div style="overflow-x:auto">
+  <table class="ptable">
+    <thead>
+      <tr>
+        <th>Produto</th>
+        <th>Unid.</th>
+        <th>Faturamento</th>
+        <th>% fat. total</th>
+        <th>Média unid/mês</th>
+        <th>Média fat/mês</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Kit Cavalo Forte</td>
+        <td>382</td><td>R$ 115.061</td>
+        <td><span class="pct-pill">4,3%</span></td>
+        <td>38</td><td>R$ 11.506</td>
+      </tr>
+      <tr>
+        <td>Kit Encorpa Cabelo</td>
+        <td>306</td><td>R$ 67.842</td>
+        <td><span class="pct-pill">2,5%</span></td>
+        <td>28</td><td>R$ 6.168</td>
+      </tr>
+      <tr>
+        <td>Kit Lamelar</td>
+        <td>427</td><td>R$ 58.271</td>
+        <td><span class="pct-pill">2,2%</span></td>
+        <td>107</td><td>R$ 14.568</td>
+      </tr>
+      <tr>
+        <td>Kit Cavalo Forte Shampoo e Condicionador 500ml</td>
+        <td>373</td><td>R$ 36.568</td>
+        <td><span class="pct-pill pct-pill-b">1,4%</span></td>
+        <td>27</td><td>R$ 2.612</td>
+      </tr>
+      <tr>
+        <td>Fluido Engrossador Encorpa Cabelo 120ml</td>
+        <td>915</td><td>R$ 34.849</td>
+        <td><span class="pct-pill pct-pill-b">1,3%</span></td>
+        <td>65</td><td>R$ 2.489</td>
+      </tr>
+      <tr>
+        <td>Supermáscara Acidificante Redutor de pH 240g</td>
+        <td>522</td><td>R$ 28.927</td>
+        <td><span class="pct-pill pct-pill-b">1,1%</span></td>
+        <td>37</td><td>R$ 2.066</td>
+      </tr>
+      <tr>
+        <td>Tônico Ativador Cavalo Forte 120ml</td>
+        <td>648</td><td>R$ 28.254</td>
+        <td><span class="pct-pill pct-pill-b">1,1%</span></td>
+        <td>46</td><td>R$ 2.018</td>
+      </tr>
+      <tr>
+        <td>Fluido Capilar Pré-Treino</td>
+        <td>386</td><td>R$ 18.328</td>
+        <td><span class="pct-pill pct-pill-b">0,7%</span></td>
+        <td>64</td><td>R$ 3.055</td>
+      </tr>
+      <tr>
+        <td>Selante de Pontas Cavalo Forte 35ml</td>
+        <td>366</td><td>R$ 17.235</td>
+        <td><span class="pct-pill pct-pill-b">0,6%</span></td>
+        <td>26</td><td>R$ 1.231</td>
+      </tr>
+      <tr>
+        <td>Hidratante Labial Doce de Leite 10g</td>
+        <td>317</td><td>R$ 6.035</td>
+        <td><span class="pct-pill pct-pill-b">0,2%</span></td>
+        <td>40</td><td>R$ 754</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="note">% calculado sobre o faturamento total de R$ 2,67M · ordenado por faturamento total</p>
+</div>
+
+<div class="row2">
+  <div>
+    <p class="section-title">Frete médio por estado (excl. zeros)</p>
+    <div class="chart-box">
+      <div class="bar-row"><div class="bar-label">Pernambuco</div><div class="bar-track"><div class="bar-fill" style="width:100%;background:#BA7517"></div></div><div class="bar-val">R$48,41</div><div class="bar-sub">1,9% ped</div></div>
+      <div class="bar-row"><div class="bar-label">Bahia</div><div class="bar-track"><div class="bar-fill" style="width:76.7%;background:#BA7517"></div></div><div class="bar-val">R$37,14</div><div class="bar-sub">5,0% ped</div></div>
+      <div class="bar-row"><div class="bar-label">Mato Grosso</div><div class="bar-track"><div class="bar-fill" style="width:75%;background:#BA7517"></div></div><div class="bar-val">R$36,34</div><div class="bar-sub">1,8% ped</div></div>
+      <div class="bar-row"><div class="bar-label">Goiás</div><div class="bar-track"><div class="bar-fill" style="width:65.5%;background:#BA7517"></div></div><div class="bar-val">R$31,71</div><div class="bar-sub">3,4% ped</div></div>
+      <div class="bar-row"><div class="bar-label">Santa Catarina</div><div class="bar-track"><div class="bar-fill" style="width:58.1%;background:#BA7517"></div></div><div class="bar-val">R$28,12</div><div class="bar-sub">5,8% ped</div></div>
+      <div class="bar-row"><div class="bar-label">Paraná</div><div class="bar-track"><div class="bar-fill" style="width:55.9%;background:#BA7517"></div></div><div class="bar-val">R$27,08</div><div class="bar-sub">5,7% ped</div></div>
+      <div class="bar-row"><div class="bar-label">Rio Grande do Sul</div><div class="bar-track"><div class="bar-fill" style="width:55.7%;background:#BA7517"></div></div><div class="bar-val">R$26,98</div><div class="bar-sub">3,6% ped</div></div>
+      <div class="bar-row"><div class="bar-label">São Paulo</div><div class="bar-track"><div class="bar-fill" style="width:51.6%;background:#BA7517"></div></div><div class="bar-val">R$24,97</div><div class="bar-sub">30,3% ped</div></div>
+      <div class="bar-row"><div class="bar-label">Minas Gerais</div><div class="bar-track"><div class="bar-fill" style="width:40.7%;background:#BA7517"></div></div><div class="bar-val">R$19,70</div><div class="bar-sub">19,0% ped</div></div>
+    </div>
+  </div>
+  <div>
+    <p class="section-title">Tempo de despacho — pedido → envio (excl. mesmo dia)</p>
+    <div class="chart-box">
+      <div class="bar-row"><div class="bar-label">Total Express</div><div class="bar-track"><div class="bar-fill" style="width:38%;background:#534AB7"></div></div><div class="bar-val">2,5 dias</div></div>
+      <div class="bar-row"><div class="bar-label">Frete Grátis</div><div class="bar-track"><div class="bar-fill" style="width:49%;background:#534AB7"></div></div><div class="bar-val">3,2 dias</div></div>
+      <div class="bar-row"><div class="bar-label">SEDEX</div><div class="bar-track"><div class="bar-fill" style="width:54%;background:#534AB7"></div></div><div class="bar-val">3,5 dias</div></div>
+      <div class="bar-row"><div class="bar-label">PAC</div><div class="bar-track"><div class="bar-fill" style="width:100%;background:#534AB7"></div></div><div class="bar-val">6,5 dias</div></div>
+      <p class="note">Média global: 4,1 dias · excluindo despacho no mesmo dia (0)</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;text-align:center;margin-top:14px">
+        <div><div style="font-size:18px;font-weight:500">48%</div><div style="font-size:11px;color:#888">em até 1 dia</div></div>
+        <div><div style="font-size:18px;font-weight:500">78%</div><div style="font-size:11px;color:#888">em até 3 dias</div></div>
+        <div><div style="font-size:18px;font-weight:500">90%</div><div style="font-size:11px;color:#888">em até 7 dias</div></div>
       </div>
     </div>
   </div>
@@ -131,9 +264,7 @@ h1{font-size:22px;font-weight:500;margin-bottom:.25rem}
 <div class="chart-box">
   <div style="overflow-x:auto">
   <table class="cohort-table">
-    <tr>
-      <th>Cohort</th><th>M+0</th><th>M+1</th><th>M+2</th><th>M+3</th><th>M+4</th><th>M+5</th><th>M+6</th><th>M+7</th><th>M+8</th><th>M+9</th><th>M+10</th><th>M+11</th>
-    </tr>
+    <tr><th>Cohort</th><th>M+0</th><th>M+1</th><th>M+2</th><th>M+3</th><th>M+4</th><th>M+5</th><th>M+6</th><th>M+7</th><th>M+8</th><th>M+9</th><th>M+10</th><th>M+11</th></tr>
     <tr id="cr1"><td>Fev/25 (67)</td></tr>
     <tr id="cr2"><td>Mar/25 (1.200)</td></tr>
     <tr id="cr3"><td>Abr/25 (784)</td></tr>
@@ -158,7 +289,7 @@ h1{font-size:22px;font-weight:500;margin-bottom:.25rem}
         <span><span class="leg-dot" style="background:#378ADD"></span>Mercado Pago 61%</span>
         <span><span class="leg-dot" style="background:#1D9E75"></span>Nuvem Pago 39%</span>
       </div>
-      <div style="position:relative;height:160px"><canvas id="c2"></canvas></div>
+      <div style="position:relative;height:150px"><canvas id="c2"></canvas></div>
       <div style="margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:8px">
         <div style="text-align:center"><div style="font-size:15px;font-weight:500">3x</div><div style="font-size:11px;color:#888">parcelamento mais comum</div></div>
         <div style="text-align:center"><div style="font-size:15px;font-weight:500">R$ 76,9K</div><div style="font-size:11px;color:#888">total em descontos</div></div>
@@ -172,30 +303,13 @@ h1{font-size:22px;font-weight:500;margin-bottom:.25rem}
         <span><span class="leg-dot" style="background:#7F77DD"></span>Mobile 82%</span>
         <span><span class="leg-dot" style="background:#5DCAA5"></span>Loja Virtual 18%</span>
       </div>
-      <div style="position:relative;height:160px"><canvas id="c3"></canvas></div>
+      <div style="position:relative;height:150px"><canvas id="c3"></canvas></div>
       <div style="margin-top:12px;text-align:center">
-        <div style="font-size:15px;font-weight:500">8.826</div>
-        <div style="font-size:11px;color:#888">pedidos via mobile</div>
+        <div style="font-size:15px;font-weight:500">8.826 pedidos via mobile</div>
+        <div style="font-size:11px;color:#888">pico entre 13h–15h e 20h–21h</div>
       </div>
     </div>
   </div>
-</div>
-
-<p class="section-title">Top 10 produtos — unidades vendidas</p>
-<div class="chart-box">
-  <div class="produto-row" style="font-weight:500;color:#888;font-size:12px;border-bottom:0.5px solid rgba(0,0,0,.08);padding-bottom:5px">
-    <span>Produto</span><span>Unid.</span>
-  </div>
-  <div class="produto-row"><span>Fluido Engrossador Encorpa Cabelo 120ml</span><span style="font-weight:500">915</span></div>
-  <div class="produto-row"><span>Tônico Ativador Cavalo Forte 120ml</span><span style="font-weight:500">648</span></div>
-  <div class="produto-row"><span>Supermáscara Acidificante Redutor de pH 240g</span><span style="font-weight:500">522</span></div>
-  <div class="produto-row"><span>Kit Lamelar</span><span style="font-weight:500">427</span></div>
-  <div class="produto-row"><span>Fluido Capilar Pré-Treino</span><span style="font-weight:500">386</span></div>
-  <div class="produto-row"><span>Kit Cavalo Forte</span><span style="font-weight:500;color:#1D9E75">382 — R$ 115K</span></div>
-  <div class="produto-row"><span>Kit Cavalo Forte Shampoo e Condicionador 500ml</span><span style="font-weight:500">373</span></div>
-  <div class="produto-row"><span>Selante de Pontas Cavalo Forte 35ml</span><span style="font-weight:500">366</span></div>
-  <div class="produto-row"><span>Kit Encorpa Cabelo</span><span style="font-weight:500;color:#1D9E75">306 — R$ 68K</span></div>
-  <div class="produto-row"><span>Shampoo Cavalo Forte 1L</span><span style="font-weight:500">297</span></div>
 </div>
 
 <p class="section-title">Cancelamentos por mês</p>
@@ -212,12 +326,14 @@ h1{font-size:22px;font-weight:500;margin-bottom:.25rem}
 <p class="section-title">Insights e recomendações</p>
 <div class="alert">Retenção muito baixa (~1,5%/mês): 88,3% dos clientes compram apenas uma vez. Programas de fidelidade, e-mail marketing pós-compra e kits de reposição são prioritários.</div>
 <div class="alert">Março/25 teve pico de cancelamentos (10,7%). Valide se houve problema operacional ou de pagamento naquele período.</div>
+<div class="alert">Frete médio real é R$ 25,43 excluindo pedidos sem custo — Nordeste pesa muito (PE R$48, BA R$37). Revise a política de frete nessas regiões.</div>
 <div class="insight">82% dos pedidos vêm do mobile — experiência e checkout mobile são críticos. Teste velocidade de página e abandono de carrinho no celular.</div>
-<div class="insight">Nordeste e Norte têm ticket médio alto (Pará R$311, AL R$306, PE R$284) mas frete maior — oportunidade de posicionamento premium ou frete grátis condicional nessas regiões.</div>
-<div class="insight">Intervalo médio de recompra é 79 dias — ideal para automação de e-mail entre o dia 50-70 pós-compra com oferta de reposição.</div>
-<div class="success-chip">Kit Cavalo Forte é o produto estrela: R$115K em faturamento com 382 unidades. Concentre ações de upsell e bundles nessa linha.</div>
-<div class="success-chip">Total Express despacha em 1,8 dias em média (vs 5,4 do PAC) — comunicar esse diferencial pode aumentar conversão.</div>
-<div class="insight">Pico de pedidos entre 13h-15h e 20h-21h. Concentre campanhas pagas e stories nesses horários.</div>
+<div class="insight">SP+MG+RJ concentram 59,5% dos pedidos e 55,7% do faturamento. Nordeste e Norte têm ticket médio alto mas peso pequeno — potencial de crescimento expressivo.</div>
+<div class="insight">Intervalo médio de recompra é 79 dias — ideal para automação de e-mail entre o dia 50–70 pós-compra com oferta de reposição.</div>
+<div class="success-chip">Kit Cavalo Forte lidera em faturamento: R$115K totais, R$11,5K/mês. Concentre upsell e bundles nessa linha.</div>
+<div class="success-chip">Kit Lamelar tem o maior volume médio mensal: 107 unidades/mês com R$14,6K de faturamento mensal — produto de alto giro.</div>
+<div class="success-chip">Total Express despacha em 2,5 dias em média vs 6,5 do PAC — comunicar esse diferencial pode aumentar conversão.</div>
+<div class="insight">Pico de pedidos entre 13h–15h e 20h–21h. Concentre campanhas pagas e stories nesses horários.</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script>
@@ -233,42 +349,22 @@ new Chart(document.getElementById('c1'),{
   options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{
     y1:{position:'left',grid:{color:'rgba(128,128,128,.1)'},ticks:{color:'#888',font:{size:10}}},
     y2:{position:'right',grid:{display:false},ticks:{color:'#1D9E75',font:{size:10},callback:v=>'R$'+Math.round(v/1000)+'K'}},
-    x:{ticks:{color:'#888',font:{size:10},maxRotation:45}}
+    x:{ticks:{color:'#888',font:{size:10},maxRotation:45,autoSkip:false}}
   }}
 });
-
-new Chart(document.getElementById('c2'),{
-  type:'doughnut',
-  data:{labels:['Mercado Pago','Nuvem Pago'],datasets:[{data:[6634,4150],backgroundColor:['#378ADD','#1D9E75'],borderWidth:0}]},
-  options:{responsive:true,maintainAspectRatio:false,cutout:'70%',plugins:{legend:{display:false}}}
-});
-
-new Chart(document.getElementById('c3'),{
-  type:'doughnut',
-  data:{labels:['Mobile','Loja Virtual'],datasets:[{data:[8826,1953],backgroundColor:['#7F77DD','#5DCAA5'],borderWidth:0}]},
-  options:{responsive:true,maintainAspectRatio:false,cutout:'70%',plugins:{legend:{display:false}}}
-});
-
+new Chart(document.getElementById('c2'),{type:'doughnut',data:{labels:['Mercado Pago','Nuvem Pago'],datasets:[{data:[6634,4150],backgroundColor:['#378ADD','#1D9E75'],borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,cutout:'70%',plugins:{legend:{display:false}}}});
+new Chart(document.getElementById('c3'),{type:'doughnut',data:{labels:['Mobile','Loja Virtual'],datasets:[{data:[8826,1953],backgroundColor:['#7F77DD','#5DCAA5'],borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,cutout:'70%',plugins:{legend:{display:false}}}});
 new Chart(document.getElementById('c4'),{
   type:'bar',
-  data:{labels:months,datasets:[{label:'Cancelamento %',data:[2.9,7.1,10.7,9.6,1.4,2.1,1.4,1.8,1.0,1.8,2.5,1.0,0.5,0.5],backgroundColor:months.map((_,i)=>[1,2,3].includes(i)?'#E24B4A':'#F09595')}]},
-  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{
-    y:{grid:{color:'rgba(128,128,128,.1)'},ticks:{color:'#888',font:{size:10},callback:v=>v+'%'}},
-    x:{ticks:{color:'#888',font:{size:10},maxRotation:45}}
-  }}
+  data:{labels:months,datasets:[{data:[2.9,7.1,10.7,9.6,1.4,2.1,1.4,1.8,1.0,1.8,2.5,1.0,0.5,0.5],backgroundColor:months.map((_,i)=>[1,2,3].includes(i)?'#E24B4A':'#F09595')}]},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{ticks:{color:'#888',font:{size:10},callback:v=>v+'%'},grid:{color:'rgba(128,128,128,.1)'}},x:{ticks:{color:'#888',font:{size:10},maxRotation:45,autoSkip:false}}}}
 });
-
-const horas=Array.from({length:24},(_,i)=>i);
 const pedHora=[219,137,62,43,28,56,102,209,410,540,694,675,686,720,784,667,646,601,591,586,695,692,551,390];
 new Chart(document.getElementById('c5'),{
   type:'bar',
-  data:{labels:horas.map(h=>h+'h'),datasets:[{data:pedHora,backgroundColor:pedHora.map(v=>v>=680?'#534AB7':'#AFA9EC')}]},
-  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{
-    y:{grid:{color:'rgba(128,128,128,.1)'},ticks:{color:'#888',font:{size:10}}},
-    x:{ticks:{color:'#888',font:{size:10}}}
-  }}
+  data:{labels:Array.from({length:24},(_,i)=>i+'h'),datasets:[{data:pedHora,backgroundColor:pedHora.map(v=>v>=680?'#534AB7':'#AFA9EC')}]},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{ticks:{color:'#888',font:{size:10}},grid:{color:'rgba(128,128,128,.1)'}},x:{ticks:{color:'#888',font:{size:10}}}}}
 });
-
 const cohortData=[
   [100,1.5,1.5,null,4.5,null,1.5,1.5,1.5,1.5,null,1.5],
   [100,1.6,1.5,2.0,1.8,2.1,1.3,1.5,1.1,1.8,1.1,1.1],
@@ -283,20 +379,18 @@ const cohortData=[
   [100,1.9,1.5,1.3,null,null,null,null,null,null,null,null],
   [100,3.1,null,null,null,null,null,null,null,null,null,null],
 ];
-const rowIds=['cr1','cr2','cr3','cr4','cr5','cr6','cr7','cr8','cr9','cr10','cr11','cr12'];
-function cohortColor(v){
-  if(v===null)return'';
-  if(v>=100)return'background:#1D9E75;color:#fff';
-  if(v>=3)return'background:#9FE1CB;color:#085041';
-  if(v>=2)return'background:#C0DD97;color:#3B6D11';
-  return'background:#f1efe8;color:#5F5E5A';
-}
-rowIds.forEach((id,i)=>{
+['cr1','cr2','cr3','cr4','cr5','cr6','cr7','cr8','cr9','cr10','cr11','cr12'].forEach((id,i)=>{
   const tr=document.getElementById(id);
   cohortData[i].forEach(v=>{
     const td=document.createElement('td');
     if(v===null){td.innerHTML='<span style="color:#ccc">—</span>';}
-    else{td.innerHTML=`<div class="ct" style="${cohortColor(v)}">${v===100?'100%':v+'%'}</div>`;}
+    else{
+      let s='background:#f1efe8;color:#5F5E5A';
+      if(v>=100)s='background:#1D9E75;color:#fff';
+      else if(v>=3)s='background:#9FE1CB;color:#085041';
+      else if(v>=2)s='background:#C0DD97;color:#3B6D11';
+      td.innerHTML=`<div class="ct" style="${s}">${v===100?'100%':v+'%'}</div>`;
+    }
     tr.appendChild(td);
   });
 });
